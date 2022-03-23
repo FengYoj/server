@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" th:href="${setting?.icon}" type="image/x-icon">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title th:text="${entity?.title?:'500 server error'}"></title>
+
+	<link rel="stylesheet" href="/error/css/dmaku.css">
+</head>
+<body>
+	<div class="error-page">
+		<div class="error-page-blank-wrap">
+			<div class="site-error">
+				<h1 class="headline" th:utext="${entity?.code?:500}"></h1>
+				<div class="error-content">
+					<h4 class="error-content-text">海面雾气太大</h4>
+					<h4 class="error-content-text">受天气影响，<span th:utext="${entity?.content?:'服务器跑去偷懒了'}"></span></h4>
+					<h5> 你可以 <a href="/">返回首页</a> 。</h5>
+				</div>
+				<img src="/error/images/error-bg.png" style="padding:20px 0 120px;">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

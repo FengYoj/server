@@ -1,0 +1,113 @@
+{
+    "menus": [{
+        "icon": "menu_home.svg",
+        "href": "/admin/#/",
+        "name": "首页",
+        "root": "home"
+    }, {
+        "icon": "menu_data.svg",
+        "root": "data",
+        "name": "数据管理"
+    }, {
+        "icon": "menu_user.svg",
+        "root": "user",
+        "name": "用户管理",
+        "href": "/admin/#/user"
+    }, {
+        "icon": "menu_tool.svg",
+        "root": "tool",
+        "name": "工具箱",
+        "href": "/admin/#/tool"
+    }],
+
+    "submenus": [{
+        "icon": "menu_message.svg",
+        "root": "message",
+        "name": "消息通知",
+        "href": "/admin/#/message"
+    }, {
+        "icon": "menu_setting.svg",
+        "root": "setting",
+        "name": "设置"
+    }],
+
+    "pages": [
+    {
+        "title": "管理员用户",
+        "name": "AdminAccount",
+        "createDataUrl": "/AdminAccount/GetCreateData",
+        "editDataUrl": "/AdminAccount/FindEntity",
+        "tableDataUrl": "/AdminAccount/GetTableData"
+    },
+    
+    {
+        "title": "系统日志",
+        "href": "/logs",
+        "component": "/admin/pages/logs"
+    },
+
+    {
+        "name": "BlockList",
+        "title": "限制名单",
+        "createDataUrl": "/Blocklist/GetCreateData",
+        "tableDataUrl": "/Blocklist/GetTableData"
+    },
+
+    {
+        "name": "Allowlist",
+        "title": "准许名单",
+        "createDataUrl": "/Allowlist/GetCreateData",
+        "tableDataUrl": "/Allowlist/GetTableData"
+    },
+
+    {
+        "name": "Exception",
+        "title": "程序异常",
+        "tableDataUrl": "/Exception/GetTableData"
+    },
+
+    {
+        "title": "访问日志",
+        "name": "Access",
+        "tableDataUrl": "/Access/GetTableData"
+    },
+
+    {
+        "title": "订单异常",
+        "name": "OrdersException",
+        "tableDataUrl": "/OrdersException/GetTableData"
+    },
+
+    {
+        "title": "语言标识符",
+        "name": "LanguageSign",
+        "createDataUrl": "/LanguageSign/GetCreateData",
+        "tableDataUrl": "/LanguageSign/GetTableData"
+    },
+
+    {
+        "title": "语言包",
+        "name": "Language",
+        "createDataUrl": "/Language/GetCreateData",
+        "tableDataUrl": "/Language/GetTableData"
+    },
+
+    {
+        "title": "系统设置",
+        "href": "/setting/config",
+        "component": "/admin/pages/setting/config"
+    },
+
+    {
+        "title": "数据收集",
+        "name": "Collect",
+        "tableDataUrl": "/Collect/GetTableData"
+    }],
+
+    "error": {
+        "404": {
+            "title": "404",
+            "component": "/error/404"
+        }
+    }
+}
